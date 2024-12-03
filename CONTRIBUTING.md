@@ -53,7 +53,7 @@ Please note this documentation assumes you already have [`uv`](https://github.co
 
 ```bash
 cd <directory_in_which_repo_should_be_created>
-git clone git@github.com:YOUR_NAME/streaming-voice-api.git
+git clone git@github.com:notnodnod/streaming-voice-api.git
 ```
 
 3. Now we need to install the environment. Navigate into the directory
