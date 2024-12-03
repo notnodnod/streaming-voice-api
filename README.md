@@ -6,7 +6,7 @@
 [![Commit activity](https://img.shields.io/github/commit-activity/m/notnodnod/streaming-voice-api)](https://img.shields.io/github/commit-activity/m/notnodnod/streaming-voice-api)
 [![License](https://img.shields.io/github/license/notnodnod/streaming-voice-api)](https://img.shields.io/github/license/notnodnod/streaming-voice-api)
 
-An
+An open source API for streaming TTS (and possibly streaming STT in the future). WIP🚧👷‍♂️🛠
 
 - **Github repository**: <https://github.com/notnodnod/streaming-voice-api/>
 - **Documentation** <https://notnodnod.github.io/streaming-voice-api/>
