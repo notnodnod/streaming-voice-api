@@ -10,6 +10,10 @@ inputs:
     description: "uv version to use"
     required: true
     default: "0.5.5"
+  just-version:
+    description: "just version to use"
+    required: true
+    default: "1.37.0"
 
 runs:
   using: "composite"
@@ -24,6 +28,11 @@ runs:
         version: ${{ inputs.uv-version }}
         enable-cache: 'true'
         cache-suffix: ${{ matrix.python-version }}
+
+    - name: Install just
+      uses: taiki-e/install-action@v2
+      with:
+        tool: just@${{ inputs.just-version }}
 
     - name: Install Python dependencies
       run: uv sync --frozen
