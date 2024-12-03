@@ -2,18 +2,16 @@
 name = "streaming-voice-api"
 version = "0.0.1"
 description = "An"
-authors = [{ name = "notnodnod", email = "190180894+notnodnod@users.noreply.github.com" }]
+authors = [
+    { name = "notnodnod", email = "190180894+notnodnod@users.noreply.github.com" },
+]
 readme = "README.md"
 keywords = ['python']
-requires-python = ">=3.9,<4.0"
+requires-python = ">=3.13,<4.0"
 classifiers = [
     "Intended Audience :: Developers",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
@@ -25,20 +23,20 @@ Documentation = "https://notnodnod.github.io/streaming-voice-api/"
 
 [tool.uv]
 dev-dependencies = [
-    "pytest>=7.2.0",
-    "pre-commit>=2.20.0",
-    "tox-uv>=1.11.3",
-    "deptry>=0.20.0",
-    "mypy>=0.991",
-    "pytest-cov>=4.0.0",
-    "ruff>=0.6.9",
-    "mkdocs>=1.4.2",
-    "mkdocs-material>=8.5.10",
-    "mkdocstrings[python]>=0.26.1",
+    "pytest>=8.3.4",
+    "pre-commit>=4.0.1",
+    "tox-uv>=1.16.0",
+    "deptry>=0.21.1",
+    "mypy>=1.13.0",
+    "pytest-cov>=6.0.0",
+    "ruff>=0.8.1",
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.5.47",
+    "mkdocstrings[python]>=1.12.2",
 ]
 
 [build-system]
-requires = ["setuptools >= 61.0"]
+requires = ["setuptools >= 75.6.0"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
@@ -58,7 +56,7 @@ show_error_codes = true
 testpaths = ["tests"]
 
 [tool.ruff]
-target-version = "py39"
+target-version = "py313"
 line-length = 120
 fix = true
 
@@ -83,7 +81,8 @@ select = [
     # mccabe
     "C90",
     # pycodestyle
-    "E", "W",
+    "E",
+    "W",
     # pyflakes
     "F",
     # pygrep-hooks
@@ -114,4 +113,3 @@ skip_empty = true
 [tool.coverage.run]
 branch = true
 source = ["streaming_voice_api"]
-
