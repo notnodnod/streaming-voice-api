@@ -15,6 +15,9 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
+dependencies = [
+    "realtimetts[coqui]>=0.4.18",
+]
 
 [project.urls]
 Homepage = "https://notnodnod.github.io/streaming-voice-api/"
