@@ -15,6 +15,7 @@ def foo(bar: str) -> str:
 
 if __name__ == "__main__":
     import logging
+    import time
 
     from RealtimeTTS import CoquiEngine, TextToAudioStream
 
@@ -29,7 +30,9 @@ if __name__ == "__main__":
 
     source_voice = "voices/female_01.wav"
     coqui_engine = CoquiEngine(voice=source_voice, level=level)
-    stream = TextToAudioStream(coqui_engine, level=level)
+    stream = TextToAudioStream(coqui_engine, level=level, muted=True)
     stream.feed(dummy_generator())
-    stream.play(output_wavfile="outputs/" + stream.engine.engine_name + "_output.wav", debug=debug)
+    stream.play(
+        output_wavfile=f"outputs/{int(time.time())}_{stream.engine.engine_name}_output.wav", debug=debug, muted=True
+    )
     coqui_engine.shutdown()
